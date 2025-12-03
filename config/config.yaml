@@ -1,0 +1,23 @@
+model:
+  deepseek:
+    api: "xxxxx"
+    model_provider: 'openai'
+    model: 'deepseek-chat'
+    api_base: 'https://api.deepseek.com'
+    max_token: 2048
+  glm:
+    api: "xxxxx"
+  rag:
+    embedding_model: 'embedding-2'
+  mcp:
+    amap-maps:
+      api_key: "xxxxx"
+    kubernetes:
+      # 是否启用非破坏性模式（True: 只允许只读和创建/更新，不允许删除）
+      # False: 允许所有操作（包括删除）
+      non_destructive: false
+      # kubeconfig 文件路径（可选，默认使用 ~/.kube/config）
+      # kubeconfig: "/path/to/kubeconfig"
+
+      # Kubernetes 上下文名称（可选，默认使用当前上下文）
+      # context: "production-cluster"
